@@ -3,11 +3,23 @@
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
+  "bin": "./dist/src/index.js",
+  "pkg": {
+    "assets": [
+      "./dist/src/**/*"
+    ]
+  },
   "scripts": {
-    "run": "node index.mjs",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "pkg index.mjs"
+    "build:transpile": "rm -rf dist/; babel src/**/* -d dist --presets env",
+    "build:pkg": "rm -rf builds/; pkg . --out-path builds",
+    "build": "npm run build:transpile && npm run build:pkg",
+    "run": "babel-node src/index.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Moses Holmström",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  }
 }

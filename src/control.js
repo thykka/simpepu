@@ -1,8 +1,8 @@
 
-import Time from './time.mjs';
-import Lottery from './lottery.mjs';
-import Player from './player.mjs';
-import GameInput from './input.mjs';
+import Time from './time.js';
+import Lottery from './lottery.js';
+import Player from './player.js';
+import GameInput from './input.js';
 const { floor } = Math;
 
 class GameControl {

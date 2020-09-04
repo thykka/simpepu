@@ -1,4 +1,4 @@
-import Time from "./time.mjs";
+import Time from "./time.js";
 const { random } = Math;
 
 class Lottery {
