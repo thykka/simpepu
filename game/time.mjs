@@ -1,15 +1,15 @@
 const { floor, round } = Math;
+const MinutesPerHour = 60;
+const HoursPerDay = 24;
+const DayNames = 'Monday Tuesday Wednesday Thursday PePuday Saturday Sunday'.split(' ');
 
 class Time {
     constructor(time = 0) {
         this.time = time;
-        this.dayNames = 'Monday Tuesday Wednesday Thursday PePuday Saturday Sunday'.split(' ');
-        this.hoursPerDay = 24;
-        this.minutesPerHour = 60;
     }
 
     get hours() {
-        return floor(this.time) % this.hoursPerDay;
+        return floor(this.time) % HoursPerDay;
     }
 
     set hours(newHours) {
@@ -17,31 +17,31 @@ class Time {
     }
 
     get minutes() {
-        return round((this.time % 1) * this.minutesPerHour) % this.minutesPerHour;
+        return round((this.time % 1) * MinutesPerHour) % MinutesPerHour;
     }
 
     set minutes(newMinutes) {
-        return this.time += (newMinutes - this.minutes) / this.minutesPerHour;
+        return this.time += (newMinutes - this.minutes) / MinutesPerHour;
     }
 
     get day() {
-        return floor(this.time / this.hoursPerDay);
+        return floor(this.time / HoursPerDay);
     }
 
     set day(newDay) {
-        return this.time += (newDay - this.day) * this.hoursPerDay;
+        return this.time += (newDay - this.day) * HoursPerDay;
     }
 
     get week() {
-        return floor(this.day / this.dayNames.length) + 1
+        return floor(this.day / DayNames.length) + 1
     }
 
     set week(newWeek) {
-        return this.time += (newWeek - this.week) * this.hoursPerDay * this.dayNames.length
+        return this.time += (newWeek - this.week) * HoursPerDay * DayNames.length
     }
 
     get weekday() {
-        return this.dayNames[this.day % this.dayNames.length];
+        return DayNames[this.day % DayNames.length];
     }
 
     set weekday(newWeekday) {
