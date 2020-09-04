@@ -39,14 +39,14 @@
 - All actions expend TIME
     - Must check if EVENTs begin within TIME STEP
 
+- SLEEP => PLAYER.TIRED--
+    - STEP = next morning
 - WORK => PLAYER.MONEY++
     - STEP = 1h
 - EAT => PLAYER.FOOD-- && PLAYER.HUNGER--
     - STEP = 30min
-- SLEEP => PLAYER.TIRED--
-    - STEP = 8h
 - BUY => PLAYER.MONEY-- && PLAYER.TICKETS++
     - STEP = 5min
-- WIN => rnd() > PLAYER.TICKETS / NPCs.TICKETS
+- RAFFLE => rnd() > PLAYER.TICKETS / NPCs.TICKETS
     - STEP = 15min
 
