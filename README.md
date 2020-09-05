@@ -7,6 +7,8 @@ Keep your PePu skills sharp with this ultra-realistic PePu simulator!
 1. Download the latest [game executable](https://github.com/thykka/simpepu/releases/) for your chosen platform.
 
 1. Play the game.
+   - NOTE for macOS users: Game must be run via the Terminal (for now):
+   ```$ chmod +x ./simpepu-macos && ./simpepu-macos```
 
 1. Get disappointed by lack of features.
 
