@@ -13,7 +13,7 @@
     "build:transpile": "rm -rf dist/; babel src/**/* -d dist --presets env",
     "build:pkg": "rm -rf builds/; pkg . --out-path builds",
     "build": "npm run build:transpile && npm run build:pkg",
-    "run": "babel-node src/index.mjs",
+    "run": "babel-node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Moses Holmström",
