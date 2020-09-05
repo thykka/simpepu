@@ -14,6 +14,14 @@ class Lottery {
         this.time.minutes = 0;
     }
 
+    get pot() {
+        return Object.values(this.tickets).reduce((sum, value) => sum + value, 0);
+    }
+
+    get chance() {
+        return this.tickets.player / this.pot;
+    }
+
     addTickets(buyer, amount) {
         this.tickets[buyer] += amount;
     }
