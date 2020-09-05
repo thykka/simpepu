@@ -10,7 +10,7 @@ Keep your PePu skills sharp with this ultra-realistic PePu simulator!
 
 1. Get disappointed by lack of features.
 
-1. Buy more PePu to motivate @thykka to build more features!
+1. Buy more PePu to motivate the author into building more features!
 
 ## Building from source
 
