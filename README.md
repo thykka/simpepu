@@ -6,7 +6,9 @@ Keep your PePu skills sharp with this ultra-realistic PePu simulator!
 
 1. Download the latest [game executable](#) for your platform.
 
-1. Run the game
+1. Play the game.
+
+1. Buy the PePu.
 
 ## Building from source
 
@@ -20,3 +22,5 @@ Keep your PePu skills sharp with this ultra-realistic PePu simulator!
 1. Build project
 
         $ npm run build
+
+1. Run game from `./builds` folder
