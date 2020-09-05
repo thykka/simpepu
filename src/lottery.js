@@ -2,16 +2,20 @@ import Time from "./time.js";
 const { random } = Math;
 
 class Lottery {
-    constructor(currentTime = 0) {
+    constructor(currentTime) {
         this.ticketPrice = 1;
         this.tickets = {
             player: 0,
             npcs: 0
         };
         this.time = new Time(currentTime);
-        this.time.day = 4;
-        this.time.hours = 14;
         this.time.minutes = 0;
+        this.time.hours = 14;
+        this.time.day = 4;
+        if(typeof currentTime === 'object') {
+            this.time.week = currentTime.week + 1;
+        }
+        console.log(this.time);
     }
 
     get pot() {
