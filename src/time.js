@@ -1,4 +1,4 @@
-const { floor, round } = Math;
+const { floor } = Math;
 const MinutesPerHour = 60;
 const HoursPerDay = 24;
 const DayNames = 'Monday Tuesday Wednesday Thursday PePuday Saturday Sunday'.split(' ');
@@ -17,7 +17,7 @@ class Time {
     }
 
     get minutes() {
-        return round((this.time % 1) * MinutesPerHour) % MinutesPerHour;
+        return floor((this.time % 1) * MinutesPerHour) % MinutesPerHour;
     }
 
     set minutes(newMinutes) {
