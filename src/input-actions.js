@@ -16,5 +16,17 @@ export default {
         title: 'Sleep until rested',
         allowed: state => state.canSleep(),
         action: state => state.sleep()
+    },
+    'd': {
+        name: 'daydream',
+        title: 'Daydream about winning PePu',
+        allowed: state => state.canIdle(),
+        action: state => state.idle()
+    },
+    'c': {
+        name: 'continue',
+        title: 'Continue',
+        allowed: state => state.canResume(),
+        action: state => state.resume()
     }
 }
