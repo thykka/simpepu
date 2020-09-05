@@ -4,11 +4,13 @@ Keep your PePu skills sharp with this ultra-realistic PePu simulator!
 
 ## Installation
 
-1. Download the latest [game executable](#) for your platform.
+1. Download the latest [game executable](https://github.com/thykka/simpepu/releases/) for your chosen platform.
 
 1. Play the game.
 
-1. Buy the PePu.
+1. Get disappointed by lack of features.
+
+1. Buy more PePu to motivate @thykka to build more features!
 
 ## Building from source
 
