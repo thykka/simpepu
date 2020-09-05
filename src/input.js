@@ -24,7 +24,7 @@ class Input {
   }
 
   quit() {
-    console.clear();
+    //console.clear();
     process.exit();
   }
 }
